@@ -1,0 +1,35 @@
+﻿<Window x:Class="My_Simple_Emu_Launcher.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:My_Simple_Emu_Launcher"
+        mc:Ignorable="d"
+        Title="My Simple Emu Launcher" Height="450" Width="800">
+    <Grid Margin="10" x:Name="Emulators">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Row="0" Grid.Column="0" Margin="5,0,0,0" Orientation="Vertical"  >
+            <Label>Playstation </Label>
+            <Button x:Name="ps1_button" Content="PS1"  Click="ps1_button_Click"/>
+        </StackPanel>        
+        <StackPanel Grid.Row="0" Grid.Column="1" Margin="5,0,0,0" Orientation="Vertical"  >
+            <Label>Playstation 2</Label>
+            <Button x:Name="ps2_button" Content="PS2"  Click="ps2_button_Click"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="0" Margin="5,0,0,0" Orientation="Vertical"  >
+            <Label>Playstation 3</Label>
+            <Button x:Name="ps3_button" Content="PS3"  Click="ps3_button_Click"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="1" Margin="5,0,0,0" Orientation="Vertical"  >
+            <Label>Nintendo Switch</Label>
+            <Button x:Name="nsw_button" Content="Switch"  Click="nsw_button_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
