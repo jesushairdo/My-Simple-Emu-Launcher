@@ -24,6 +24,42 @@ namespace My_Simple_Emu_Launcher
         public MainWindow()
         {
             InitializeComponent();
+            var emulators = new List<Emulator>();
+            var retroarch = new Emulator();
+            retroarch.Path = "C:\\Emulation\\RetroArch\\retroarch.exe";
+            retroarch.Name = "RetroArch";
+            retroarch.Icon = "C:\\Emulation\\RetroArch\\retroarch.png";
+            emulators.Add(retroarch);
+            var duckstation = new Emulator();
+            duckstation.Path = "C:\\Emulation\\PSX\\duckstation-qt-x64-ReleaseLTCG.exe";
+            duckstation.Name = "Duckstation";
+            duckstation.Icon = "C:\\Emulation\\PSX\\duckstation.png";
+            emulators.Add(duckstation);
+            var pcsx2 = new Emulator();
+            pcsx2.Path = "C:\\Emulation\\PS2\\pcsx2-qt.exe";
+            pcsx2.Name = "PCSX2";
+            pcsx2.Icon = "C:\\Emulation\\PS2\\pcsx2.png";
+            emulators.Add(pcsx2);
+            var rpcs3 = new Emulator();
+            rpcs3.Path = "C:\\Emulation\\RPCS3\\rpcs3.exe";
+            rpcs3.Name = "RPCS3";
+            rpcs3.Icon = "C:\\Emulation\\RPCS3\\rpcs3.png";
+            emulators.Add(rpcs3);
+            var ryujinx = new Emulator();
+            ryujinx.Path = "C:\\Emulation\\Switch\\Ryujinx\\Ryujinx.exe";
+            ryujinx.Name = "Ryujinx";
+            ryujinx.Icon = "C:\\Emulation\\Switch\\Ryujinx\\ryujinx.png";
+            emulators.Add(ryujinx);
+            var yuzu = new Emulator();
+            yuzu.Path = "C:\\Emulation\\Switch\\Yuzu\\yuzu.exe";
+            yuzu.Name = "Yuzu";
+            yuzu.Icon = "C:\\Emulation\\Switch\\Yuzu\\yuzu.png";
+            emulators.Add(yuzu);
+            var dolphin = new Emulator();
+            dolphin.Path = "C:\\Emulation\\Dolphin-x64\\Dolphin.exe";
+            dolphin.Name = "Dolphin";
+            dolphin.Icon = "C:\\Emulation\\Dolphin-x64\\dolphin.png";
+            emulators.Add(dolphin);       
         }
 
         private bool launchEmu(string emufilePath)
